@@ -10,9 +10,9 @@ Steps to compile and install FlexiR
 6. enter: lsmod | grep tcp, if you can see "tcp_flexir" in the results, congrats, FlexiR is ready to use.
 
 How to use FlexiR
-
-FlexiR can be enabled in an application using setsockopt as follows (example code is in C)
-At any time when you want to make a connection less than best effort, you can insert the following code
-char *name="flexir";
-setsockopt(sd, SOL_TCP, TCP_RCV_CC, name, strlen(name));
+   FlexiR can be enabled in an application using setsockopt as follows (example code is in C)
+   At any time when you want to make a connection less than best effort, you can insert the following code
+   
+   char *name="flexir";
+   setsockopt(sd, SOL_TCP, TCP_RCV_CC, name, strlen(name));
    
