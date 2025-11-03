@@ -7,11 +7,7 @@ default:
 
 install:
 	install -v -m 644 tcp_flexir.ko $(IDIR)
-	# use depmod when the module uses symbols exported by other modules or other modules use symbols exported by it
-	# depmod analyzes the interdependencies for each kernel module and save the results to /usr/lib/modules/(uname -r)/modules.dep
-	# so even if the module has dependencies, we only need to run depmod when the dependencies change
-	#
-	#depmod  
+	depmod  
 	modprobe tcp_flexir
 	
 uninstall:
